@@ -86,7 +86,7 @@ body {
     /*background: url('../img/layout/main_bg.jpg');
 	background-repeat: repeat-x;
 	background-color: #fefbf6;*/
-    font-size: 14px;
+    font-size: 15px;
     line-height: 28px;
     font-family: Arial, sans-serif;
 }
@@ -290,7 +290,6 @@ a{
   width: 1000px;
   height: 1200px;
   margin: 90px auto 0px;
-
   bottom: 5px;
 }
 
@@ -324,7 +323,7 @@ a{
 
 #suncg-wrapper h2 {
   font-weight: 700;
-  font-size: 15px;
+  font-size: 14px;
   margin-top: 10px;
   margin-bottom: 5px;
 }
