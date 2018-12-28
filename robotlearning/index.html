@@ -2,8 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Robot Learning</title>
-  <link rel="stylesheet" type="text/css" href="pvg.css">
+  <title>Advanced Robot Learning</title>
 </head>
   <body>
   <script src="jquery.min.js"></script>
@@ -16,7 +15,35 @@
   });
   </script>
 
-  <style>
+<style>
+  body, td {
+    font-family: "PVGCGFont",Calibri,Arial;
+    font-size: 13px;
+    margin: 0;
+    padding: 0;  
+  }
+
+  b {
+    font-family: Arial;
+  }
+
+  h1 {
+    font-family: Arial;
+  }
+
+  h2 {
+    font-family: Arial;
+    font-size: 13pt;
+  }
+
+  body
+  {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1300px;
+    background-repeat:repeat-x;
+  }
+
   #schedule
   {
   margin-top: 10px;
@@ -41,11 +68,18 @@
   color:#000;
   background-color:#DDD;
   }
+
+  #schedule strong
+  {
+  color:#000;
+  margin-top: 10px;
+  }
+
   .google img{
-    height: 14px;
+    height: 13px;
   }
   .scholar img{
-    height: 14px;
+    height: 13px;
   }
   .bibtex
   {
@@ -77,28 +111,38 @@
   </ul>
 
   <h2>Topics include:</h2>
-   <li> Basic knowledge for working with a robot (different modules in robotics system, simulation environment)</li>
+   <li> Basic knowledge for machine learning in robotics systems 
+   <li> Using simulation environments for robot learning</li>
    <li> Learning for robot perception (with a focus on 3D perception e.g. 3D object detection, 6D pose estimation, and SLAM)</li>
    <li> Learning for planning and control (supervised learning, self-supervised learning, reinforcement learning, imitation learning)</li>
 
   <h2>Pre-requisites:</h2>
-  <li>Knowledge of basic computer science principles and skills, at a level sufficient to write a reasonably non-trivial computer program. (CS xxx or equivalent) This course will primarily use python.</li>
+  <li>Knowledge of basic computer science principles and skills, at a level sufficient to write a reasonably non-trivial computer program. (COMS xxx or equivalent) This course will primarily use python.</li>
   <li>Familiarity with the basic linear algebra</li>
-  <li>Knowledge of basic machine learning, computer vision and robotics (CS xxx or xxx or CS xxx)</li>
+  <li>Knowledge of basic machine learning, computer vision and robotics. Taken any of the following course or equivalent: COMS 4733 or COMS 4731</li>
 
   <h2>Grading:</h2>
-  <li> Topic presentation (40%): two student present one topic. The presentation should include an overview of the topic and presentation of related research papers. </li>
-  <li> Project (group of 1-4) (40%):  proposal presentation, final presentation, code, writeup, optional video </li>
-  <li> Class participation (20%): ask questions and participate in discussions</li>
+  <ul>
+    <li> Topic presentation (40%): 2-4 student per topic.  </li>
+      <ul>
+        <li>The presentation should include an overview of the topic and presentation of related research papers on each sub-topic.</li>
+        <li>Prepare slides and drop by my office one week before the presentation to discuss about the slides. </li>
+        <li>For easy sharing and collabrate, please use <a href="https://www.google.com/slides/about/">google slides</a> to make your presentation. Here is a  <a href="https://docs.google.com/presentation/d/1ylDMje2t-cqAkLGs3aL812MgOYGv0oyyfGH4KoDjnfg/edit?usp=sharing"> templete </a> for your reference.</li>
+      </ul>
+    <li> Project (group of 1-4) (40%):  proposal presentation, final presentation, code, writeup, optional video </li>
+    <li> Class participation (20%): ask questions and participate in discussions</li>
+  </ul>
 
   <h2>Schedule:</h2>
+  This schedule is preliminary and subject to change as the term evolves.
   <table id="schedule">
-  <tr><th style="width: 80px;">Date</th><th style="width: 180px;">Topic</th><th style="width: 80px;">Presenter</th><th style="width: 40px;">Slides</th> <th style="width: 450px;">Reading and references</th></tr>
+  <tr><th style="width: 10px;">Date</th><th style="width: 100px;">Topic</th><th style="width: 50px;">Presenter</th><th style="width: 10px;">Slides</th> <th style="width: 100px;">Content</th> <th style="width: 440px;">Reading and references</th></tr>
   <tr>
     <td>Week 1</td>
     <td>Machine learning in robotics: motivation and challenges</td>
     <td>Shuran Song</td>
     <td> <a href="">slides</a></td>
+    <td><p><p> </td>
     <td class="bibtex"> 
     </td>
   </tr>
@@ -107,9 +151,9 @@
     <td>Week 2</td>
     <td>Simulation environment for robot learning</td>
     <td>TBD</td>
-    <td> <a href="">slides</a></td>
-    <td class=""> 
-      <a class="bibtex">
+    <td><a href="">slides</a></td>
+    <td><p><p> </td>
+    <td class="bibtex"> 
         @article{coumans2016pybullet,
         title={Pybullet, a python module for physics simulation for games, robotics and machine learning},
         author={Coumans, E and Bai, Y},
@@ -141,53 +185,24 @@
     <td>Learning for object recoginzation and localization</td>
     <td>TBD</td>
     <td> <a href="">slides</a></td>
-    <td > 
-
-
-      <!-- <strong>3D Data Representation</strong><br> -->
-      <strong>Learning for depth estimation</strong>
-        <a class="bibtex">
-          @inproceedings{eigen2014depth,
-            title={Depth map prediction from a single image using a multi-scale deep network},
-            author={Eigen, David and Puhrsch, Christian and Fergus, Rob},
-            booktitle={Advances in neural information processing systems},
-            pages={2366--2374},
-            year={2014}
-          }
-          @inproceedings{eigen2015predicting,
-            title={Predicting depth, surface normals and semantic labels with a common multi-scale convolutional architecture},
-            author={Eigen, David and Fergus, Rob},
-            booktitle={Proceedings of the IEEE International Conference on Computer Vision},
-            pages={2650--2658},
-            year={2015}
-          }
-        </a>
-
-      <strong>3D object recognition</strong>
-        <a class="bibtex">
-          @inproceedings{song2014sliding,
-          title={Sliding shapes for 3d object detection in depth images},
-          author={Song, Shuran and Xiao, Jianxiong},
-          booktitle={European conference on computer vision},
-          pages={634--651},
-          year={2014},
-          organization={Springer}
-          }
-          @InProceedings{song2016deep,
-          author = {Song, Shuran and Xiao, Jianxiong},
-          title = {Deep Sliding Shapes for Amodal 3D Object Detection in RGB-D Images},
-          booktitle = {The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
-          month = {June},
-          year = {2016}
-          }
-          @article{qi2017frustum,
-            title={Frustum pointnets for 3d object detection from rgb-d data},
-            author={Qi, Charles R and Liu, Wei and Wu, Chenxia and Su, Hao and Guibas, Leonidas J}
-          }
-        </a>
-
-      <strong>Object pose estimation</strong>
-      <a class="bibtex">
+    <td>
+      <p>3D sensors & 3D data represntation</p> 
+      <p>Depth estimation</p> 
+      <p>3D object detection</p>
+      <p>Object pose estimation</p>
+    </td>
+    <td class="bibtex"> 
+        @InProceedings{song2016deep,
+        author = {Song, Shuran and Xiao, Jianxiong},
+        title = {Deep Sliding Shapes for Amodal 3D Object Detection in RGB-D Images},
+        booktitle = {The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+        month = {June},
+        year = {2016}
+        }
+        @article{qi2017frustum,
+          title={Frustum pointnets for 3d object detection from rgb-d data},
+          author={Qi, Charles R and Liu, Wei and Wu, Chenxia and Su, Hao and Guibas, Leonidas J}
+        }
         @inproceedings{LINEMOD,
           title={Multimodal templates for real-time detection of texture-less objects in heavily cluttered scenes},
           author={Hinterstoisser, Stefan and Holzer, Stefan and Cagniart, Cedric and Ilic, Slobodan and Konolige, Kurt and Navab, Nassir and Lepetit, Vincent},
@@ -219,8 +234,6 @@
           journal={arXiv preprint arXiv:1804.00175},
           year={2018}
         }
-      </a>
-
     </td>
   </tr>
 
@@ -229,9 +242,13 @@
     <td>Learning for 3D scene understanding</td>
     <td>TBD</td>
     <td> <a href="">slides</a></td>
-    <td class=""> 
-      <strong>Visual SLAM </strong>
-      <a class="bibtex">
+    <td>
+      <p>Visual SLAM & Reconstraction<p> 
+      <p>Learning for 3D scene reconstraction<p> 
+      <p>Learning for 3D scene parsing and completion<p>
+      <p>Implicit 3D scene representation<p>
+    </td>
+    <td class="bibtex"> 
       @article{taketomi2017visual,
         title={Visual SLAM algorithms: A survey from 2010 to 2016},
         author={Taketomi, Takafumi and Uchiyama, Hideaki and Ikeda, Sei},
@@ -265,10 +282,24 @@
         journal={arXiv preprint arXiv:1703.03098},
         year={2017}
       }
-      </a>
+        @inproceedings{eigen2015predicting,
+          title={Predicting depth, surface normals and semantic labels with a common multi-scale convolutional architecture},
+          author={Eigen, David and Fergus, Rob},
+          booktitle={Proceedings of the IEEE International Conference on Computer Vision},
+          pages={2650--2658},
+          year={2015}
+        }
+        @article{saxena2009make3d,
+          title={Make3d: Learning 3d scene structure from a single still image},
+          author={Saxena, Ashutosh and Sun, Min and Ng, Andrew Y},
+          journal={IEEE transactions on pattern analysis and machine intelligence},
+          volume={31},
+          number={5},
+          pages={824--840},
+          year={2009},
+          publisher={IEEE}
+        }
 
-      <strong>Deep learning for 3D scene understanding </strong>
-      <a class="bibtex">
        @article{han2009bottom,
         title={Bottom-up/top-down image parsing with attribute grammar},
         author={Han, Feng and Zhu, Song-Chun},
@@ -279,7 +310,7 @@
         year={2009},
         publisher={IEEE}
         }
-          @inproceedings{song2017semantic,
+        @inproceedings{song2017semantic,
           title={Semantic scene completion from a single depth image},
           author={Song, Shuran and Yu, Fisher and Zeng, Andy and Chang, Angel X and Savva, Manolis and Funkhouser, Thomas},
           booktitle={Computer Vision and Pattern Recognition (CVPR), 2017 IEEE Conference on},
@@ -287,10 +318,6 @@
           year={2017},
           organization={IEEE}
         }
-      </a>
-
-      <strong>Implicit 3D scene representation: </strong>
-      <a class="bibtex">
         @article{eslami2018neural,
           title={Neural scene representation and rendering},
           author={Eslami, SM Ali and Rezende, Danilo Jimenez and Besse, Frederic and Viola, Fabio and Morcos, Ari S and Garnelo, Marta and Ruderman, Avraham and Rusu, Andrei A and Danihelka, Ivo and Gregor, Karol and others},
@@ -301,7 +328,6 @@
           year={2018},
           publisher={American Association for the Advancement of Science}
         }
-      </a>
     </td>
   </tr>
 
@@ -310,6 +336,11 @@
     <td>Learning for sensor fusion</td>
     <td>TBD</td>
     <td> <a href="">slides</a></td>
+    <td>
+      <p><p> 
+      <p><p>
+      <p><p>
+    </td>
     <td class="bibtex"> </td>
   </tr>
 
@@ -322,10 +353,13 @@
     <td>Self-Supervised Learning</td>
     <td>TBD</td>
     <td> <a href="">slides</a></td>
-    <td class=""> 
-      <strong> Self-supervise learing for vision: </strong>
-
-      <a class = "bibtex">
+    <td>
+      <p>Supervised learing & self-supervised learing<p> 
+      <p>Self-supervised learing for vision<p>
+      <p>Self-supervised learing for manupulation<p>
+      <p>Self-supervised learing for navigation<p>
+    </td>
+    <td class="bibtex"> 
         @inproceedings{pathak2016context,
         title={Context encoders: Feature learning by inpainting},
         author={Pathak, Deepak and Krahenbuhl, Philipp and Donahue, Jeff and Darrell, Trevor and Efros, Alexei A},
@@ -340,14 +374,6 @@
           pages={8052--8060},
           year={2018}
         }
-      </a>
-
-
-        
-      
-      <strong>Self-supervise learing for manupulation and navigation: </strong>
-
-      <a class = "bibtex">
        @inproceedings{pinto2016supersizing,
         title={Supersizing self-supervision: Learning to grasp from 50k tries and 700 robot hours},
         author={Pinto, Lerrel and Gupta, Abhinav},
@@ -356,6 +382,15 @@
         year={2016},
         organization={IEEE}
         }
+        @inproceedings{pinto2016curious,
+          title={The curious robot: Learning visual representations via physical interactions},
+          author={Pinto, Lerrel and Gandhi, Dhiraj and Han, Yuanfeng and Park, Yong-Lae and Gupta, Abhinav},
+          booktitle={European Conference on Computer Vision},
+          pages={3--18},
+          year={2016},
+          organization={Springer}
+        }
+
         @article{sermanet2017time,
           title={Time-Contrastive Networks: Self-Supervised Learning from Video},
           author={Sermanet, Pierre and Lynch, Corey and Chebotar, Yevgen and Hsu, Jasmine and Jang, Eric and Schaal, Stefan and Levine, Sergey},
@@ -371,7 +406,6 @@
           year={2018},
           organization={IEEE}
         }
-      </a>
     </td>
   </tr>
  <!--  <tr>
@@ -386,41 +420,86 @@
   <tr>
     <td>Week 7</td>
     <td>Project proposal presentation</td>
+    <td> <a href="">slides</a></td>
     <td>All teams</td>
-    <td> <a href="">-</a></td>
+    <td></td>
     <td class="bibtex"> 
     
     </td>
   </tr>
 
   <tr>
-    <td>Week 8</td>
-    <td> Reinforcement learning</td>
-    <td>TBD</td>
-    <td> <a href="">slides</a></td>
-    <td class="bibtex"> 
-    <a href="">[mnih2013playing] </a><br>
-    <a href="">[mnih2016asynchronous]</a><br>
-    <a href="">[dosovitskiy2016learning]</a><br>
-    </td>
-  </tr>
-
-  <tr>
-    <td>Week 9</td>
-    <td>Learning state representaion</td>
-    <td>TBD</td>
-    <td> <a href="">slides</a></td>
-    <td class="bibtex"> </td>
-  </tr>
-
- 
-  
-
-  <tr>
     <td>Week 10</td>
     <td>Learning from demonstration</td>
     <td>TBD</td>
     <td> <a href="">slides</a></td>
+    <td>
+      <p><p> 
+      <p><p>
+      <p><p>
+      <p><p>
+    </td>
+    <td class="bibtex"> </td>
+  </tr>
+
+
+  <tr>
+    <td>Week 8</td>
+    <td> Deep Reinforcement learning</td>
+    <td>TBD</td>
+    <td> <a href="">slides</a></td>
+    <td>
+      <p>Markov Decision Processes<p> 
+      <p>Q-learning<p>
+      <p>Policy learning<p>
+      <p>Asynchronous Advantage Actor-Critic<p>
+    </td>
+    <td class="bibtex"> 
+    @article{mnih2015human,
+      title={Human-level control through deep reinforcement learning},
+      author={Mnih, Volodymyr and Kavukcuoglu, Koray and Silver, David and Rusu, Andrei A and Veness, Joel and Bellemare, Marc G and Graves, Alex and Riedmiller, Martin and Fidjeland, Andreas K and Ostrovski, Georg and others},
+      journal={Nature},
+      volume={518},
+      number={7540},
+      pages={529},
+      year={2015},
+      publisher={Nature Publishing Group}
+    }
+
+    @article{karpathy2016deep,
+      title={Deep reinforcement learning: Pong from pixels},
+      author={Karpathy, Andrej},
+      journal={url: http://karpathy. github. io/2016/05/31/rl},
+      year={2016}
+    }
+
+    @inproceedings{mnih2016asynchronous,
+      title={Asynchronous methods for deep reinforcement learning},
+      author={Mnih, Volodymyr and Badia, Adria Puigdomenech and Mirza, Mehdi and Graves, Alex and Lillicrap, Timothy and Harley, Tim and Silver, David and Kavukcuoglu, Koray},
+      booktitle={International conference on machine learning},
+      pages={1928--1937},
+      year={2016}
+    }
+
+    </td>
+  </tr>
+
+  
+ 
+  
+
+  
+  <tr>
+    <td>Week 9</td>
+    <td>Multi-task learning & meta-learning</td>
+    <td>TBD</td>
+    <td> <a href="">slides</a></td>
+    <td>
+      <p><p> 
+      <p><p>
+      <p><p>
+      <p><p>
+    </td>
     <td class="bibtex"> </td>
   </tr>
 
@@ -429,6 +508,12 @@
     <td>Learning from physics</td>
     <td>TBD</td>
     <td> <a href="">slides</a></td>
+    <td>
+      <p><p> 
+      <p><p>
+      <p><p>
+      <p><p>
+    </td>
     <td class="bibtex"> </td>
   </tr>
 
@@ -438,6 +523,12 @@
     <td>Lifelong learning</td>
     <td>TBD</td>
     <td> <a href="">slides</a></td>
+    <td>
+      <p><p> 
+      <p><p>
+      <p><p>
+      <p><p>
+    </td>
     <td class=""> 
       <a class="bibtex">
       @inproceedings{sun2016neol,
@@ -462,6 +553,12 @@
     <td>Multi-agent learning</td>
     <td>TBD</td>
     <td> <a href="">slides</a></td>
+    <td>
+      <p><p> 
+      <p><p>
+      <p><p>
+      <p><p>
+    </td>
     <td class="bibtex"> </td>
   </tr>
 
@@ -477,13 +574,19 @@
     <td>Project presentation</td>
     <td>TBD</td>
     <td> <a href="">slides</a></td>
+    <td>
+      <p><p> 
+      <p><p>
+      <p><p>
+      <p><p>
+    </td>
     <td class="bibtex"> </td>
   </tr>
 
   </table>
   </div>
 
-  <h2>Resources:</h2>
+  <h2>Related Courses:</h2>
     <h3><a name="related" id="related"></a>Related Courses</h3>
     <li><a href="http://www.cs.columbia.edu/~allen/F18"> COMS 4733 Computational Aspects of Robotics</a> by Peter Allen</li>
     <li><a href="http://www.cs.columbia.edu/~allen/S18"> COMS 6731 Humanoid Robots</a> by Peter Allen</li>
@@ -491,19 +594,8 @@
     <li><a href="http://w4731.cs.columbia.edu/"> COMS 4731 Computer Vision</a> by Carl Vondrick</li>
     <li><a href="http://www.cs.cornell.edu/courses/cs4758/2013sp/"> CS 4758 / 6758: Robot Learning</a> by Ashutosh Saxena </li>
 
-    
 
-
-    <h3><a name="books" id="books"></a>Books</h3>
-    <p>There is no textbook for this class. The following are just references if you are interested.</p>
-    <ul>
-      <li><strong>[Sz]</strong> Szeliski, <em><a href="http://www.amazon.com/Computer-Vision-Algorithms-Applications-Science/dp/1848829345/">Computer Vision: Algorithms and Applications</a>, </em>Springer, 2010 (<a href="http://szeliski.org/Book/">online draft</a>)</li>
-      <li> <strong>[HZ]</strong> Hartley and Zisserman, <em><a href="http://www.amazon.com/Multiple-View-Geometry-Computer-Vision/dp/0521540518">Multiple View Geometry in Computer Vision</a></em>, Cambridge University Press, 2004</li>
-      <li><strong>[FP]</strong> Forsyth and Ponce, <em><a href="http://www.amazon.com/Computer-Vision-Approach-David-Forsyth/dp/0130851981">Computer Vision: A Modern Approach</a></em>, Prentice Hall, 2002</li>
-      <li><strong>[Pa]</strong> Palmer, <a href="http://www.amazon.com/Vision-Science-Phenomenology-Stephen-Palmer/dp/0262161834/">Vision Science</a>, MIT Press, 1999</li>
-      <li><strong>[Mi]</strong> Mitchel, <em><a href="http://www.amazon.com/Machine-Learning-Tom-M-Mitchell/dp/0070428077/">Machine Learning</a>, </em>McGraw-Hill, 1997</li>
-      <li><strong>[DHS]</strong> Duda, Hart and Stork, <em><a href="http://www.amazon.com/Pattern-Classification-2nd-Richard-Duda/dp/0471056693">Pattern Classification (2nd Edition)</a></em>, Wiley-Interscience, 2000</li>
-    </ul>
+    <span> </span>
   </body>
 </html>
 
@@ -512,59 +604,3 @@
 <a class="google"><img src="google.ico"></a>&nbsp;<a class="scholar"><img src="scholar.ico"></a> <a class="url">[<span class="key"></span>] <span class="title"></span></a>. 
 </li>
 </div>
-
-<!-- <h3>Related Courses:</h3>
-  <p>Computer Vision Class at Princeton</p>
-  <ul>
-  <li><a href="http://www.cs.princeton.edu/courses/archive/fall13/cos429/">Fall 2013</a></li>
-  <li><a href="http://www.cs.princeton.edu/courses/archive/fall11/cos429/">Fall 2011</a></li>
-  </ul>
-
-    <p>By Antonio Torralba at MIT:</p>
-    <ul>
-    <li><a href="http://6.869.csail.mit.edu/fa12/">Advances in Computer Vision</a></li>
-    <li><a href="http://people.csail.mit.edu/torralba/courses/6.870_2011f/6.870.grounding.html">Grounding Object Recognition and Scene Understanding</a></li>
-    <li><a href="http://people.csail.mit.edu/torralba/courses/6.870/6.870.recognition.htm">Object Recognition and Scene Understanding</a></li>
-  </ul>
-    
-    <p>By Alyosha Efros at CMU/Berkeley:</p>
-    <ul>
-  <li><a href="http://graphics.cs.cmu.edu/courses/15-463/2012_fall/463.html">Computational Photography</a></li>
-  <li><a href="https://docs.google.com/document/pub?id=1jGBn7zPDEaU33fJwi3YI_usWS-U6gpSSJotV_2gDrL0">Learning-based Methods in Vision</a></li>
-  <li><a href="http://graphics.cs.cmu.edu/courses/15-463/2011_fall/463.html">Computational Photography</a></li>
-  <li><a href="http://graphics.cs.cmu.edu/courses/P2P/">Pixels to Percepts: Human Visual Perception for Vision and Graphics</a></li>
-  <li><a href="http://graphics.cs.cmu.edu/courses/15-463/2010_fall/">Computational Photography</a></li>
-  <li><a href="http://graphics.cs.cmu.edu/courses/15-463/2010_spring/">Computational Photography</a></li>
-  <li><A href="http://www.cs.cmu.edu/~efros/courses/LBMV09/">Learning-based Methods in Vision</a></li>
-  <li><a href="http://graphics.cs.cmu.edu/courses/15-463/2008_fall/">Computational Photography</a></li>
-  <li><a href="http://graphics.cs.cmu.edu/courses/15-463/2007_fall/">Computational Photography</a></li>
-  <li><a href="http://graphics.cs.cmu.edu/nsp/course/15-462/Fall07/">Computer Graphics</a></li>
-  <li><A href="http://www.cs.cmu.edu/~efros/courses/LBMV07/">Learning-based Methods in Vision</a></li>
-  <li><a href="http://graphics.cs.cmu.edu/courses/15-463/2006_fall/www/463.html">Computational Photography</a></li>
-  <li><a href="courses/AP06/">Advanced Machine Perception</a></li>
-  <li><a href="http://graphics.cs.cmu.edu/courses/15-463/2005_fall/www/463.html">Computational Photography</a></li>
-  <li><a href="http://graphics.cs.cmu.edu/courses/15-463/2004_fall/www/463.html">Rendering and Image Processing</a></li>
-  </ul>
-
-  <p>By James Hays at Brown:</p>
-  <ul>
-    <li><a href="http://cs.brown.edu/courses/csci1430/">Introduction to Computer Vision</a></li>
-    <li><a href="http://cs.brown.edu/courses/csci2951-b/">Data-Driven Vision and Graphics</a></li>
-  </ul>
-
-    <p>By others:</p>
-    <ul>
-
-    <li><a href="https://www.ipam.ucla.edu/schedule.aspx?pc=gss2012">Deep Learning Summer School 2012</a></li>
-    <li><a href="http://www.cs.cornell.edu/courses/cs4670/2013fa/">Introduction to Computer Vision</a>, by Noah Snavely</li>
-    <li><a href="http://www.cs.unc.edu/~marc/mvg/slides.html">Multiple View Geometry</a>, by Marc Pollefeys</li>
-    <li><a href="http://www.robots.ox.ac.uk/~az/lectures/index.html">Geometry</a>, by Andrew Zisserman</li>
-    <li><a href="http://www.cs.berkeley.edu/~malik/cs294.html">Recognizing People, Objects and Actions</a>, by Jitendra Malik</li>
-    <li><a href="http://www.cs.brown.edu/courses/cs143/">Introduction to Computer Vision</a>, by Michael Black</li>
-    <li><a href="http://www.cs.utexas.edu/%7Egrauman/courses/fall2009/main.htm">Computer Vision</a>, by Kristen Grauman</li>
-    <li><a href="http://www.cs.nyu.edu/%7Efergus/">Computer Vision</a>, by Rob Fergus</li>
-    <li><a href="http://vision.stanford.edu/teaching/cs223b/">Introduction to Computer Vision</a>, by Fei-Fei Li</li>
-    <li><a href="http://www.cs.ubc.ca/spider/lowe/vision.html">The Computer Vision Industry</a></li>
-    </ul>
-</div>
- -->
