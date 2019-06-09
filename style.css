@@ -285,10 +285,10 @@ a{
 }*/
 
 
-#suncg-main-wrapper{
+#main-wrapper{
   background: #fff;
   width: 1000px;
-  height: 1200px;
+/*  height: 1200px;*/
   margin: 90px auto 0px;
   bottom: 5px;
 }
