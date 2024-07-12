@@ -160,6 +160,12 @@ h1 {
     margin-right: 20px;
 }
 
+.slider video {
+    height: 205px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
 .recent-work::-webkit-scrollbar {
     background: none;
     height: 8px;
